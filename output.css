@@ -662,11 +662,11 @@ video {
 }
 
 .rounded-tl-2xl {
-  border-top-left-radius: 1rem;
+  border-top-left-radius: 2rem;
 }
 
 .rounded-br-2xl {
-  border-bottom-right-radius: 1rem;
+  border-bottom-right-radius: 2rem;
 }
 
 .border-4 {
@@ -725,6 +725,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.-skewx-20 {
+  transform: skewX(-20deg);
+}
+
 .hover\:-mt-1:hover {
   margin-top: -0.25rem;
 }
@@ -748,4 +752,3 @@ video {
     display: flex;
   }
 }
-  

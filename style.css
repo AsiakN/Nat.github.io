@@ -15,4 +15,6 @@
 
 
 @tailwind utilities;
-  
+.-skewx-20 {
+  transform: skewX(-20deg);
+}
