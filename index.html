@@ -2,63 +2,22 @@
 <html>
   <head>
     <title>My Personal Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
   </head>
   <body>
-    <header>
-      <h1>Welcome to My Personal Website</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#interests">Interests</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <p>Hello, my name is [Your Name] and I am a [Your Profession]. I have always been interested in [Interest] and have pursued it throughout my career. In my free time, I enjoy [Hobby] and [Hobby].</p>
-      </section>
-      <section id="experience">
-        <h2>Experience</h2>
-        <h3>Job Title at Company</h3>
-        <p>Brief overview of your responsibilities and accomplishments at this job.</p>
-        <h3>Job Title at Company</h3>
-        <p>Brief overview of your responsibilities and accomplishments at this job.</p>
-      </section>
-      <section id="education">
-        <h2>Education</h2>
-        <h3>Degree at University</h3>
-        <p>Brief overview of your degree and any relevant coursework.</p>
-        <h3>Degree at University</h3>
-        <p>Brief overview of your degree and any relevant coursework.</p>
-      </section>
-      <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>Skill</li>
-          <li>Skill</li>
-          <li>Skill</li>
-          <li>Skill</li>
-          <li>Skill</li>
-        </ul>
-      </section>
-      <section id="interests">
-        <h2>Interests</h2>
-        <ul>
-          <li>Interest</li>
-          <li>Interest</li>
-          <li>Interest</li>
-          <li>Interest</li>
-          <li>Interest</li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>Copyright [Your Name] [Current Year]</p>
-    </footer>
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center py-4 bg-gray-900">
+        <div class="flex-shrink-0 ml-10 cursor-pointer">
+          <span class="ml-1 text-3xl text-white-200 font-semibold">ASIAK</span>
+          <i class="fas fa-bars fa-2x visible md:invisible mr-10 md:mr-0 text-blue-200 cursor-pointer"></i>
+          <ul class="hidden md:flex overflow-x-hidden mr-10 font-semibold">
+            <li class="mr-6 p-1 border-b-2 border-orange-500">
+              <a class="text-white-200 cursor-default" href="#">Home</a>
+            </li>
+          </ul>        
+        </div>
+      </div>
+    </div>
   </body>
 </html>
