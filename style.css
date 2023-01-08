@@ -14,7 +14,7 @@
 }
 
 .section-two{
-  @apply w-full h-full p-6;
+  @apply w-full h-full p-6 my-2;
 }
 
 .section-two-title {
