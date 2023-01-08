@@ -2,7 +2,7 @@
 @tailwind components;
 
 .section {
-  @apply w-fit p-6 h-fit;
+  @apply w-full p-6;
 }
 
 .section-title {

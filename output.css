@@ -548,10 +548,7 @@ video {
 }
 
 .section {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   padding: 1.5rem;
 }
 
@@ -629,21 +626,16 @@ video {
   display: none;
 }
 
-.h-48 {
-  height: 12rem;
+.h-56 {
+  height: 14rem;
 }
 
 .h-full {
   height: 100%;
 }
 
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.h-56 {
-  height: 14rem;
+.h-48 {
+  height: 12rem;
 }
 
 .w-48 {
