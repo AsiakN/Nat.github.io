@@ -6,15 +6,27 @@
 }
 
 .section-title {
-  @apply w-48 mx-auto pt-6 border-b-2 border-orange-500 text-center text-2xl text-blue-700;
+  @apply w-48 mx-auto pt-6 border-b-2 border-orange-500 text-center text-2xl text-black;
 }
 
 .section-subtitle {
   @apply p-2 text-center text-lg text-gray-700;
 }
 
+.section-two{
+  @apply w-full h-full p-6;
+}
+
+.section-two-title {
+  @apply w-48 mx-auto pt-6 border-b-2 border-orange-500 text-center text-2xl text-black;
+}
+
+.section-two-subtitle {
+  @apply p-2 text-center text-lg text-gray-700;
+}
 
 @tailwind utilities;
 .-skewx-20 {
   transform: skewX(-20deg);
 }
+
