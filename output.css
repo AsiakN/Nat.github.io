@@ -746,6 +746,10 @@ video {
   height: 6rem;
 }
 
+.h-px {
+  height: 1px;
+}
+
 .w-48 {
   width: 12rem;
 }
@@ -764,6 +768,10 @@ video {
 
 .w-4\/5 {
   width: 80%;
+}
+
+.w-px {
+  width: 1px;
 }
 
 .flex-shrink-0 {
