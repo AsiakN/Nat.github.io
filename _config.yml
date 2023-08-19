@@ -1,2 +1,3 @@
 name: Nathaniel Asiak, Horrible Cop
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
