@@ -22,31 +22,36 @@ title: Nathaniel Asiak
 		As a bidirectional encoder, it allows you to contextualize tokens using information obtained from the entire input sequence, thereby generating better representations that could be used for downstream tasks.
 		The original implementation of BERT had 110M parameters and was experimented on GLUE tasks, MultiNLI tasks, etc.</p>
 
-	<h3>Key Implementation Details</h3>
+	<h3>METHODOLOGY</h3>
+	<p>
+		<h4>INPUT REPRESENTATION</h4>
+			<p>
+				<ul>
+					<li>Generate word embeddings of input sequences (a single sentence and a pair of sentences) using wordpiece embeddings.</li>
+					<li>Generate positional embeddings of the word embeddings. Positional embeddings map the position of input tokens. Two tokens may have the same position.</li>
+				</ul>
+			</p>
 	
-	<h4>INPUT REPRESENTATION</h4>
-	<ul>
-		<li>Generate word embeddings of input sequences (a single sentence and a pair of sentences) using wordpiece embeddings.</li>
-		<li>Generate positional embeddings of the word embeddings. Positional embeddings map the position of input tokens. Two tokens may have the same position.</li>
-	</ul>
-	
-	<h4>PRE-TRAINING</h4>
-	<p>BERT was pre-trained on BooksCorpus (800M words) and English Wikipedia (2.5B words).
-		These were chosen in order to extract long contiguous sequences. The transformer was pre-trained on two tasks:</p>
-	
-	<ul>
-		<li><h5>MLM TASK</h5>
+		<p>
+			<h4>PRE-TRAINING</h4>
+			<p>BERT was pre-trained on BooksCorpus (800M words) and English Wikipedia (2.5B words).
+				These were chosen in order to extract long contiguous sequences. The transformer was pre-trained on two tasks:</p>	
+		</p>	
+		
+		
+		<p>
+			<h5>1. MLM TASK</h5>
 			<p>In this phase, some percentage of the input tokens were masked, and then a prediction of what was masked was predicted by a softmax function.</p>
 			<ul>
 				<li>15% of the tokens generated from the wordpiece embeddings were selected to be masked.</li>
 				<li>Of these selected tokens, 80% were replaced with [MASK], 10% randomly replaced with words, and 10% left as original.</li>
 			</ul>
-		</li>	
-		<li><h5>NSP - Next Sentence Prediction</h5>
-			<p>The next sentence prediction task just determines whether a second sentence B follows a sentence A. In choosing sentences A and B, the authors ensured 50% of the time B is the actual next sentence that follows A, and 50% of the time it is a random sentence from the corpus.</p>
-
-		</li>
-	</ul>
+		
+			<h5>2. NSP - Next Sentence Prediction</h5>
+				<p>The next sentence prediction task just determines whether a second sentence B follows a sentence A.
+					In choosing sentences A and B, the authors ensured 50% of the time B is the actual next sentence that follows A, and 50% of the time it is a random sentence from the corpus.</p>
+		</p>
+	</p>
 	
 	<p><a href="https://aclanthology.org/N19-1423.pdf">Link to Paper</a> | <a href="https://github.com/AsiakN">Code</a></p>
 </div><!-- /.blurb -->
