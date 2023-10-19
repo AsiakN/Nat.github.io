@@ -11,44 +11,53 @@ title: Nathaniel Asiak
 </div><!-- /.blurb -->
 
 <div class="blurb">
+	<h2>BERT Implementation</h2>
+	<p>This project is a custom pre-trained implementation of the BERT model proposed by ><a href="https://aclanthology.org/N19-1423.pdf">evlin et al., 2019</a>.
+		The key details and differences between this implementation and BERT lie in the number of layers, the organization of the code for the self-attention mechanism, and the size of the input sequences.
+	</p>
+	
+	<h3>Overview of BERT</h3>
+	<p>BERT, short for Bidirectional Encoder Representations from Transformer, is a language model that has become a baseline for NLP experiments. 
+		BERT was developed as an improvement to the shortcomings of processing long sentence sequences in language modeling architectures like RNN-LSTM. 
+		As a bidirectional encoder, it allows you to contextualize tokens using information obtained from the entire input sequence, thereby generating better representations that could be used for downstream tasks.
+		The original implementation of BERT had 110M parameters and was experimented on GLUE tasks, MultiNLI tasks, etc.</p>
+
+	<h3>Key Implementation Details</h3>
+	
+	<h4>INPUT REPRESENTATION</h4>
+	<ul>
+		<li>Generate word embeddings of input sequences (a single sentence and a pair of sentences) using wordpiece embeddings.</li>
+		<li>Generate positional embeddings of the word embeddings. Positional embeddings map the position of input tokens. Two tokens may have the same position.</li>
+	</ul>
+	
+	<h4>PRE-TRAINING</h4>
+	<p>BERT was pre-trained on BooksCorpus (800M words) and English Wikipedia (2.5B words).
+		These were chosen in order to extract long contiguous sequences. The transformer was pre-trained on two tasks:</p>
+	
+	<ul>
+		<li><h5>MLM TASK</h5>
+			<p>In this phase, some percentage of the input tokens were masked, and then a prediction of what was masked was predicted by a softmax function.</p>
+			<ul>
+				<li>15% of the tokens generated from the wordpiece embeddings were selected to be masked.</li>
+				<li>Of these selected tokens, 80% were replaced with [MASK], 10% randomly replaced with words, and 10% left as original.</li>
+			</ul>
+		</li>	
+		<li><h5>NSP - Next Sentence Prediction</h5>
+			<p>The next sentence prediction task just determines whether a second sentence B follows a sentence A. In choosing sentences A and B, the authors ensured 50% of the time B is the actual next sentence that follows A, and 50% of the time it is a random sentence from the corpus.</p>
+
+		</li>
+	</ul>
+	
+	<p><a href="https://aclanthology.org/N19-1423.pdf">Link to Paper</a> | <a href="https://github.com/AsiakN">Code</a></p>
+</div><!-- /.blurb -->
+
+<div class="blurb">
 	<p>Capstone Thesis: Heart Sound Classification</p>
 </div><!-- /.blurb -->
 
 <div class="blurb">
 	<p>Locovent4Africa </p>
 </div><!-- /.blurb -->
-
-# BERT Implementation
-
-This project is a custom pre-trained implementation of the BERT model proposed by Devlin et al., 2019. The key details/differences between this implementation and BERT lie in the number of layers, the organization of the code for the self-attention mechanism, and the size of the input sequences.
-
-## Overview of BERT
-
-BERT (Bidirectional Encoder Representations from Transformer) is a language model that has become a baseline for NLP experiments. BERT was developed as an improvement to the shortcomings, such as processing long sentence sequences, of language modeling architectures like RNN-LSTM. As a bidirectional encoder, it allows you to contextualize tokens using information obtained from the entire input sequence, thereby generating better representations that could be used for downstream tasks. The original implementation of BERT had 110M parameters and was experimented on GLUE tasks, MultiNLI tasks, etc.
-
-### Key Implementation Details
-
-#### INPUT
-
-- Generate word embeddings of input sequences (a single sentence and a pair of sentences) using wordpiece embeddings.
-- Generate positional embeddings of the word embeddings. Positional embeddings map the position of input tokens. Two tokens may have the same position.
-
-#### PRE-TRAINING
-
-BERT was pre-trained on BooksCorpus (800M words) and English Wikipedia (2.5B words). These were chosen in order to extract long contiguous sequences. The transformer was pre-trained on two tasks:
-
-**MLM TASK**
-
-- In this phase, simply put, some percentage of the input tokens were masked, and then a prediction of what was masked was predicted by a softmax function.
-  - 15% of the tokens generated from the wordpiece embeddings were selected to be masked.
-  - Of these selected tokens, 80% were replaced with [MASK], 10% randomly replaced with words, and 10% left as original.
-
-**NSP - Next Sentence Prediction**
-
-- The next sentence prediction task just determines whether a second sentence B follows a sentence A.
-- In choosing sentences A and B, the authors ensured 50% of the time B is the actual next sentence that follows A, and 50% of the time it is a random sentence from the corpus.
-
-[Link to Paper](https://aclanthology.org/N19-1423.pdf) | [Code](https://github.com/AsiakN)
 
 <div class="blurb">
 	<p>PyramidBERT Implementation</p>
